@@ -43,5 +43,12 @@ service(or other provider) + controller => module => main.ts
 ### DTO
 - 정보 교환시 타입체크 등의 용도로 사용하는 스키마
 - pipe를 사용해 정보를 걸러낼 수 있다
+- 쿼리에 대해 유효성 검사를 할 수 있다
+- class-vaildator 라이브러리를 사용하여 타입검사를 할 수 있다
 
-
+### pipe
+- 미들웨어처럼 사용 가능하다
+- 유효성 검사를 할 수 있다
+- transform 설정시 값을 받아서 타입을 변경해준다.
+- whiteList 설정시 허용되지 않은 것들은 벨리데이터에 도달하지 못한다.
+- forbidNonWhitelisted
