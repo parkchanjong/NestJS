@@ -17,6 +17,7 @@ service(or other provider) + controller => module => main.ts
 - Service
   - 비즈니스 로직을 작성하는 곳
 
+## REST API
 ### 컨트롤러
 - 생성 cli 명령어
   - nest g co 컨트롤러명
@@ -52,3 +53,14 @@ service(or other provider) + controller => module => main.ts
 - transform 설정시 값을 받아서 타입을 변경해준다.
 - whiteList 설정시 허용되지 않은 것들은 벨리데이터에 도달하지 못한다.
 - forbidNonWhitelisted
+
+### DI
+- di
+
+## UNIT TESTING
+### 유니테스트
+- 유니테스트
+
+## E2E TESTING
+### E2E
+- E2E
