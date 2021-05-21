@@ -59,8 +59,8 @@ service(or other provider) + controller => module => main.ts
 
 ## UNIT TESTING
 ### 유니테스트
-- 유니테스트
+- 함수 단위로 테스트
 
 ## E2E TESTING
 ### E2E
-- E2E
+- 시스템 전체 테스트
