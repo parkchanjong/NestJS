@@ -1,9 +1,10 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
+import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -12,5 +13,6 @@ async function bootstrap() {
     }),
   );
   await app.listen(5000);
+  console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
