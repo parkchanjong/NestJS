@@ -7,12 +7,17 @@ export class CatEntity {
    */
   name: string;
 
-  @ApiProperty({ example: 1, description: 'The age of the Cat' })
+  @ApiProperty({
+    type: Number,
+    example: 1,
+    description: '고양이 나이',
+  })
   age: number;
 
   @ApiProperty({
-    example: 'Maine Coon',
-    description: 'The breed of the Cat',
+    type: String,
+    example: '렉돌',
+    description: '고양이 품종',
   })
   breed: string;
 }

@@ -21,11 +21,16 @@ async function bootstrap() {
   );
 
   const options = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
-    .setVersion('1.0')
+    .setTitle('NestJS 스터디')
+    .setDescription('NestJS 알아보자')
+    .setVersion('1.0.0')
     .addTag('cats')
-    .addBearerAuth()
+    .addTag('movies')
+    .addTag('user')
+    .addBearerAuth(
+      { type: 'http', scheme: 'bearer', bearerFormat: 'Token' },
+      'access-token',
+    )
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
@@ -33,4 +38,5 @@ async function bootstrap() {
   await app.listen(5000);
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
+
 bootstrap();
