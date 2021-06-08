@@ -64,3 +64,19 @@ service(or other provider) + controller => module => main.ts
 ## E2E TESTING
 ### E2E
 - 시스템 전체 테스트
+
+
+## Interceptors
+### NestInterceptor
+- NestInterceptor 인터페이스를 구현
+- 메서드 실행 전후 추가 로직을 바인딩 할 수 있다.
+- 함수의 리턴 값 변환 할 수 있다.
+- 함수에서 예외 처리를 변형 할 수 있다.
+- 기본 함수의 기능을 확장 할 수 있다.
+- 특정 조건에서 함수를 override 할 수 있다. (ex 캐싱)
+- Execution context, Call handler
+### Binding interceptors
+### Response mapping
+### Exception mapping
+### Stream overriding
+### More operators
